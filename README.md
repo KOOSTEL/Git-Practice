@@ -33,7 +33,9 @@ Deleting files: after deleting files in the repo we must use `add` _`deleted_fil
 ***
 
 - **git status** <pre>after any file modifications we can check the status of the repo and track files </pre>
-Note that after modifying files, you must run `git add` _`modified_file`_ to refresh the status!
+Note that after modifying files, you must run `git add` _`modified_file`_ to refresh the status! <br>
+`git log` get a log about all commits. Use `"q"` to exit log <br> 
+`git diff` get a information about changes e.g new code lines.  Use `"q"` to exit log
 
 ***
 
@@ -61,12 +63,44 @@ after `git add` and `git commit` we can push (upload) the code to a remote repos
 
 ***
 
+- **git rm _filename_** <pre>removes file from your local directory</pre>
+`git rm -rf` _`foldername`_ removes a folder from your local directory <br> `-r` recursive (allows to remove folders and their contents) <br> `-f` force (ignore warnings, remove even if changes are staged or not committed)
+
+***
+
 - **git mv** _**old_filename**_ _**new_filename**_ <pre>rename file</pre>
 
 ***
 
-### Cloning Branching Pulling
+### Cloning and Pulling
 
-TODO 
+***
 
-### Deleting commits etc.
+- **git clone *url-addres*** <pre>clone entire repository from GitHub using for example a _https_ link to the project on your local machine</pre>
+`git clone` _`url-addres`_ _`foldername`_ cloning + naming a folder with _foldername_ you've set on your local machine
+
+***
+
+- **git pull** <pre>if somebody made changes in the GitHub repo you can _pull_ these changed/new files to your local machine</pre>
+inclusive commit messages, just use `git log` to review them
+
+***
+
+### Deleting commits 
+
+***
+
+0. (optional) `git checkout` _`branchname`_ (e.g main, master etc.)
+1.  `git reset --hard HEAD~n` deletes the last `n` commits, without UNDO! <br> <p>
+&emsp; -use `git reset --soft HEAD~n` removes the commit but keeps your changes in the staging area<br>
+&emsp; -use `git reset --mixed HEAD~n` removes the commit and unstages the changes
+
+2. delete your repository from GitHub using `Settings` Tab while viewing repository <br>
+
+&emsp; &emsp; <img src="images/jokir.jpg" width="250" height="150">
+
+***
+
+### Merging
+
+***
