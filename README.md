@@ -120,13 +120,13 @@ inclusive commit messages, just use `git log` to review them
 
 - **git checkout _branchname_** <pre>enter the desired branch </pre>
 you can modify anything without changes on the _main(master)_ branch <br>
-`git push origin _branchname_` to store the changes on a separate branch(in my case _**git push origin TestBranch**_)
+`git push origin _branchname_` to store the changes on a separate branch(in my case _**git push origin ForTest**_)
 
 ***
 
 - **git merge _mergingBranch_** <pre>adds content from _mergingBranch_ into the present Branch </pre>
-if we want to add for example the new content from _TestBranch_ to _master_ we need to use `checkout master` <br>
-then we just use `git merge TestBranch` to merge them. **TestBranch -> master**
+if we want to add for example the new content from _ForTest_ to _master_ we need to use `checkout master` <br>
+then we just use `git merge Fortest` to merge them. **ForTest -> master**
 
 ***
 
@@ -147,3 +147,5 @@ A <ins>conflict</ins> occurs because you are editing the same file - in this cas
 - editing the main or master is a bad idea in the big repository with many people, insted your should **fork** or use a **separate branch** and then push the changes into the main/master
 - communication with other Contributers is **crucial**
 - many other aspects, main obstacle is to solve already existing conflicts
+
+***
