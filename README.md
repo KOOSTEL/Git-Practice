@@ -101,6 +101,16 @@ inclusive commit messages, just use `git log` to review them
 
 ***
 
-### Merging
+### Merging and Branching
 
 ***
+
+**<h4>Quick Overview</h4>**
+
+&emsp; &emsp; <img src="images/explanation.png" width="450" height="250"> <br>
+
+&emsp; [Foto Source](https://www.youtube.com/watch?v=XX-Kct0PfFc&list=WL&index=5 "shish")
+
+***
+
+- **git branch _branchname_** <pre>creates new branch on GitHub </pre>
