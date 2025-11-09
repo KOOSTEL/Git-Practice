@@ -107,10 +107,43 @@ inclusive commit messages, just use `git log` to review them
 
 **<h4>Quick Overview</h4>**
 
-&emsp; &emsp; <img src="images/explanation.png" width="450" height="250"> <br>
+&emsp; &emsp; <img src="images/explanation.png" width="470" height="250"> <br>
 
 &emsp; [Foto Source](https://www.youtube.com/watch?v=XX-Kct0PfFc&list=WL&index=5 "shish")
 
 ***
 
 - **git branch _branchname_** <pre>creates new branch on GitHub </pre>
+`git branch` list all branches availible
+
+***
+
+- **git checkout _branchname_** <pre>enter the desired branch </pre>
+you can modify anything without changes on the _main(master)_ branch <br>
+`git push origin _branchname_` to store the changes on a separate branch(in my case _**git push origin TestBranch**_)
+
+***
+
+- **git merge _mergingBranch_** <pre>adds content from _mergingBranch_ into the present Branch </pre>
+if we want to add for example the new content from _TestBranch_ to _master_ we need to use `checkout master` <br>
+then we just use `git merge TestBranch` to merge them. **TestBranch -> master**
+
+***
+
+<h3>Merging Conflicts</h3>
+
+***
+Imagine the following scenario: <br>
+You are working on a separate **_branch b_**, and there is a **_main branch a_**. Then somebody edits `styles.css` and inserts something into the body selector, for example: `margin: 20px;`.<br>
+Meanwhile, you are also editing the `styles.css` file in your branch and add `padding: 30px;`.
+After that, you checkout the **_main branch a_** and **_merge_** your **_branch b_** into it.
+A <ins>conflict</ins> occurs because you are editing the same file - in this case, the same selector (body selector).
+
+***
+
+<h4>How to prevent conflicts</h4>
+
+- everybody needs to know what he/she is doing(who is **responsible** fow what)
+- editing the main or master is a bad idea in the big repository with many people, insted your should **fork** or use a **separate branch** and then push the changes into the main/master
+- communication with other Contributers is **crucial**
+- many other aspects, main obstacle is to solve already existing conflicts
